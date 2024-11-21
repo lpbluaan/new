@@ -1,0 +1,65 @@
+/* Color Palette */
+:root {
+  --color-primary: #4caf50;
+  /* Green */
+  --color-primary-dark: #388e3c;
+  /* Dark Green */
+  --color-secondary: #181818;
+  /* Black */
+  --color-background: #222222;
+  /* Black Soft */
+  --color-text-light: #ffffff;
+  /* White for contrast */
+  --color-text-dark: #f0f0f0;
+  /* Softer White */
+  --color-accent: #66bb6a;
+  /* Accent Green */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #181818;
+    --color-text-light: #f0f0f0;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-light);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Buttons */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.card {
+  background: var(--color-secondary);
+  color: var(--color-text-dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
